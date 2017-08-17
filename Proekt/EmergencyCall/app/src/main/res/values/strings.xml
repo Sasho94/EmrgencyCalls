@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Emergency Alarm</string>
+    <color name="white">#F6F6F6</color>
+    <color name="red">#9c090f</color>
+    <color name="darkred">#5f0000</color>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>>
+</resources>

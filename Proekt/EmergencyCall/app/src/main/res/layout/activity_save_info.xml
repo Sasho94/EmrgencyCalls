@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="User"
+            type="com.example.user.emergencycall.Models.User" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context="com.example.user.emergencycall.SaveInfoActivity">
+
+            <ImageView
+                android:id="@+id/imgView"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="24dp"
+                android:scaleType="fitXY"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/human" />
+
+            <EditText
+                android:id="@+id/txtName"
+                android:layout_width="239dp"
+                android:layout_height="45dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="234dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="@{User.firstName}"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:layout_editor_absoluteX="129dp" />
+
+            <TextView
+                android:id="@+id/txtNameView"
+                android:layout_width="98dp"
+                android:layout_height="37dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="8dp"
+                android:text="Име"
+                android:textSize="18sp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/txtName"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/txtName" />
+
+            <EditText
+                android:id="@+id/txtFamilyName"
+                android:layout_width="239dp"
+                android:layout_height="42dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="@{User.familyName}"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtName" />
+
+            <TextView
+                android:id="@+id/txtFamilyNameView"
+                android:layout_width="89dp"
+                android:layout_height="46dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="8dp"
+                android:text="Фамилия"
+                android:textSize="18sp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/txtFamilyName"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/txtFamilyName" />
+
+            <EditText
+                android:id="@+id/txtAddress"
+                android:layout_width="239dp"
+                android:layout_height="45dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="19dp"
+                android:ems="10"
+                android:inputType="text"
+                android:text="@{User.address}"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintLeft_toRightOf="@+id/txtAddressView"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtWeight" />
+
+            <TextView
+                android:id="@+id/txtAddressView"
+                android:layout_width="98dp"
+                android:layout_height="37dp"
+                android:layout_marginLeft="16dp"
+                android:text="Адрес"
+                android:textSize="18sp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/txtAddress"
+                app:layout_constraintLeft_toLeftOf="parent" />
+
+            <EditText
+                android:id="@+id/txtWeight"
+                android:layout_width="239dp"
+                android:layout_height="42dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:ems="10"
+                android:inputType="text"
+                android:text="@{User.weight}"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtHeight" />
+
+            <TextView
+                android:id="@+id/txtWeightView"
+                android:layout_width="89dp"
+                android:layout_height="46dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="8dp"
+                android:text="Тегло"
+                android:textSize="18sp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/txtWeight"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/txtWeight" />
+
+            <EditText
+                android:id="@+id/txtHeight"
+                android:layout_width="239dp"
+                android:layout_height="42dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:ems="10"
+                android:inputType="text"
+                android:text="@{User.height}"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtPhone" />
+
+            <TextView
+                android:id="@+id/txtHeightView"
+                android:layout_width="0dp"
+                android:layout_height="46dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="0dp"
+                android:text="Височина"
+                android:textSize="18sp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/txtHeight"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/txtHeight" />
+
+            <EditText
+                android:id="@+id/txtPhone"
+                android:layout_width="239dp"
+                android:layout_height="42dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:ems="10"
+                android:inputType="text"
+                android:text="@{User.phone}"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtFamilyName" />
+
+            <TextView
+                android:id="@+id/txtPhoneView"
+                android:layout_width="89dp"
+                android:layout_height="47dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="8dp"
+                android:text="Телефон на близък"
+                android:textSize="18sp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/txtPhone"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/txtPhone" />
+
+            <Button
+                android:id="@+id/btnSave"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="16dp"
+                android:text="Запиши"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/txtAddress" />
+
+
+        </android.support.constraint.ConstraintLayout>
+
+    </ScrollView>
+</layout>
+
